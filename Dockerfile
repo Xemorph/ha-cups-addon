@@ -30,10 +30,11 @@ RUN apt-get update \
         procps \
         whois \
         wget \
+        libcupsimage2 \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/* \
-    && wget -P /tmp/ "https://download3.ebz.epson.net/dsc/f/03/00/16/55/99/5d9684d9e9f9b0e2f75a226332047f7bd4ade672/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb"
-#    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb
+    && wget -P /tmp/ "https://download3.ebz.epson.net/dsc/f/03/00/16/55/99/5d9684d9e9f9b0e2f75a226332047f7bd4ade672/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb" \
+    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb
 
 COPY rootfs /
 
