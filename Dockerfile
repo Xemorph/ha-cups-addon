@@ -6,7 +6,9 @@ LABEL io.hass.version="1.0" io.hass.type="addon" io.hass.arch="armhf|aarch64|i38
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 
 # printer-driver-brlaser specifically called out for Brother printer support
-RUN apt-get update \
+RUN wget -P /tmp/ "https://download3.ebz.epson.net/dsc/f/03/00/16/55/99/5d9684d9e9f9b0e2f75a226332047f7bd4ade672/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb" \
+    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb \
+    && apt-get update \
     && apt-get install -y --no-install-recommends \
         sudo \
         locales \
