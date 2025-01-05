@@ -30,8 +30,8 @@ RUN apt-get update \
         bash-completion \
         procps \
         whois \
-    && cd /tmp/ && { curl -O "http://download3.ebz.epson.net/dsc/f/03/00/16/55/99/5d9684d9e9f9b0e2f75a226332047f7bd4ade672/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb" ; cd -; } \
-    && sudo dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.23-1_amd64.deb \
+    && cd /tmp/ && { curl -O "http://download3.ebz.epson.net/dsc/f/03/00/16/58/58/5c0904ab595421ee2c349b52825802c8d2cfcc78/epson-inkjet-printer-escpr2_1.2.24_armhf.deb" ; cd -; } \
+    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.24_armhf.deb \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
