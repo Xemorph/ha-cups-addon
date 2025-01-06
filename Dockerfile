@@ -30,8 +30,8 @@ RUN apt-get update \
         bash-completion \
         procps \
         whois \
-    && cd /tmp/ && { curl -O "http://download3.ebz.epson.net/dsc/f/03/00/16/58/58/5c0904ab595421ee2c349b52825802c8d2cfcc78/epson-inkjet-printer-escpr2_1.2.24_armhf.deb" ; cd -; } \
-    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.24_armhf.deb \
+    && cd /tmp/ && { curl -O "http://github.com/Xemorph/ha-cups-addon/raw/refs/heads/main/epson-inkjet-printer-escpr2_1.2.24_amd64.deb" ; cd -; } \
+    && dpkg -i /tmp/epson-inkjet-printer-escpr2_1.2.24_amd64.deb \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 
